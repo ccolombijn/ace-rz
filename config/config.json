@@ -1,0 +1,14 @@
+{
+  "app" : "app",
+  "title" : "Application Name",
+  "jquery" : "3.5.1",
+  "bootstrap" : "4.5.0",
+  "cdns" : [
+    { 
+      "url": "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment-with-locales.min.js", 
+      "sri": "sha512-yT/SWoCe2HVxCkQHbD+kjcQCxDld8tCyij/NH8bO36Ae4HDKhd8n2xJy7E22ETNpxXPr4hfY/UACaSEdSn7mtA==" 
+    }
+  
+  ],
+  "use" : [ "welcome" ]
+}
