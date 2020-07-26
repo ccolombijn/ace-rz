@@ -6,9 +6,9 @@ export const element = (()=>{
   /**
    * Creates JQuery<HTMLElement>
    * @requires $
-   * @param {string} tag 
-   * @param {object} attr 
-   * @param {string} html 
+   * @param {String} tag 
+   * @param {Object} attr 
+   * @param {String} html 
    */
   function make(tag,attr,html,event) {
     let element = $(`<${tag}></${tag.split(' ')[0]}>`);
@@ -43,7 +43,7 @@ export const element = (()=>{
   }
   /**
    * Creates Container Element
-   * @param {object} options 
+    * @param {Object} options 
    */
   function containerElement(){
     return _('div',{
@@ -52,7 +52,7 @@ export const element = (()=>{
   }
   /**
    * Creates Messages Element
-   * @param {object} options 
+    * @param {Object} options 
    */
   function messagesElement(options = {}) {
     
@@ -66,7 +66,7 @@ export const element = (()=>{
   }
   /**
    * Creates Users Element
-   * @param {object} options 
+    * @param {Object} options 
    */
   function usersElement(options = {}){
     const col_md = options.col_md ? options.col_md : '4';
@@ -77,7 +77,7 @@ export const element = (()=>{
   }
   /**
    * Creates Modal Element
-   * @param {object} options 
+    * @param {Object} options 
    */
   function modalElement(options){
     const modalLabel = options.label ? options.label : '', 
@@ -102,7 +102,7 @@ export const element = (()=>{
   }
   /**
    * 
-   * @param {object} options 
+    * @param {Object} options 
    */
   function modal(options){
     let modal;

@@ -6,7 +6,7 @@ module.exports = () => {
           https = require('https'),
           env = process.env,
           privateKeyPath = `/etc/letsencrypt/live/${env.REF_ADR}/privkey.pem`,
-          certificatePath = `/etc/letsencrypt/live/${env.REF_ADR}/fullchain.pem`
+          certificatePath = `/etc/letsencrypt/live/${env.REF_ADR}/fullchain.pem`;
     let server;
 
     if(process.env.REF_HTTP_PROTOCOL === 'https'){

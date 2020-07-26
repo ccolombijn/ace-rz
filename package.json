@@ -32,6 +32,7 @@
     "express-session": "^1.17.1",
     "http-errors": "^1.8.0",
     "https": "^1.0.0",
+    "jquery": "^3.5.1",
     "jshint": "^2.11.1",
     "morgan": "~1.10.0",
     "multer": "^1.4.2",
@@ -41,11 +42,17 @@
     "passport-local": "^1.0.0",
     "sequelize": "^6.3.3",
     "session-memory-store": "^1.0.0",
+    "types": "^0.1.1",
     "uuid": "^8.2.0",
     "websocket": "^1.0.31"
   },
   "devDependencies": {
+    "@types/express": "^4.17.7",
+    "@types/node": "^14.0.25",
     "nodemon": "^2.0.4",
-    "sequelize-cli": "^6.2.0"
+    "prettier": "2.0.5",
+    "sequelize-cli": "^6.2.0",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.7"
   }
 }

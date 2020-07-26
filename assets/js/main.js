@@ -1,10 +1,15 @@
 'use strict';
+/* laxbreak:true */
+
 import {ace,model, components as component} from 'ace';
 const options =new Object({});
 options.with = [
   { // create new 'helloWorld' component with main#main element
     name :'helloWorld',
-    el : 'main#main'
+    el : 'main#main',
+    mount(){
+
+    }
   },
   { // append content to component 'helloWorld'
     name : 'helloWorldTitle',
@@ -17,7 +22,7 @@ options.with = [
       url : 'api/something'
     }
   }
-]
+];
 const app = ace(options,function(options){
   // assign component to variable
   const helloWorld = component.helloWorld;
