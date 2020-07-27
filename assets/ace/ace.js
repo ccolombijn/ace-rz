@@ -22,11 +22,14 @@ export function ace(options,next){
       options();
     }else{
       if(options.with.prototype === Array){
-        options.with.forEach((item)=>component.with(item));
-        view[item.name] = output;
-        controller[item.name] = {
+        options.with.forEach((item)=>{
+          component.with(item)
+          view[item.name] = output;
+          controller[item.name] = {
           model : item.model.name
         }
+        });
+        
       }
     }
     if(typeof next === 'function') next(options);
