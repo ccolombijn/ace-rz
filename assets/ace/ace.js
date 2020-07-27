@@ -19,7 +19,6 @@ export function ace(options, next) {
       config.with.forEach((item) => options.with.unshift(item)); // merge config with options
     if (typeof options === 'function') {
       options();
-<<<<<<< HEAD
     }else{
       if(options.with.prototype === Array){
         options.with.forEach((item)=>{
@@ -30,15 +29,6 @@ export function ace(options, next) {
         }
         });
         
-=======
-    } else {
-      if (options.with.prototype === Array) {
-        options.with.forEach((item) => component.with(item));
-        view[item.name] = output;
-        controller[item.name] = {
-          model: item.model.name,
-        };
->>>>>>> 51f53fb1c95a6896bac6949b68704648742bd298
       }
     }
     if (typeof next === 'function') next(options);
