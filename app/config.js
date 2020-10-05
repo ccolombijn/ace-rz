@@ -2,7 +2,10 @@
 * app/config.js
 */
 'use strict';
-const _config = require('../config/app.json');
+const _config = require('../config/app.json'),
+      fs = require('fs'),
+      path = require('path'),
+      componentsPath = path.join(__dirname, 'assets/components');
 function config(){
   _config.ref_adr = process.env.REF_ADR;
   _config.version = require('../package.json').version;
@@ -13,6 +16,12 @@ function config(){
   for(let model of Object.getOwnPropertyNames(models.sequelize.models)){
     _config.models[model] = models[model].rawAttributes;
   }
+  fs.readdir(componentsPath, function (err, files) {
+    if (err) return console.log('Unable to read components: ' + err);
+    const components = [];
+    files.forEach( (component)=> components.push(component));
+    _config.components = components;
+  });
   return _config;
 }
 module.exports = config;

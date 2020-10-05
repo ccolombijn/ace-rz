@@ -1,24 +1,24 @@
 'use strict';
 import {component} from './components.js';
-const data = new Object({});
+const models = new Object({});
 export const model = (()=>{
   'use strict';
   
   return {
-    get : (model)=>{
-      if(data[model.name]){
-        return data[model.name]
+    get(model){
+      if(models[model.name]){
+        return models[model.name]
       } else {
         component.api(model,(res)=>{
-          data[model.name] = res;
+          models[model.name] = res;
         });
       }
     },
-    update : (model)=>{
-      if(data[model.name] && model.data.prototype === Array){
-        data[model.name] = model.data;
+    update(model){
+      if(models[model.name] && model.models.prototype === Array){
+        models[model.name] = model.models;
       }
     },
-    data : data
+    models : models
   }
 })();

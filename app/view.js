@@ -3,8 +3,8 @@
 */
 'use strict';
 const expressLayouts = require('express-ejs-layouts'),
-flash    = require('connect-flash'),
-path = require('path');
+      flash = require('connect-flash'),
+      path = require('path');
 module.exports = (app) =>{
   app.use(expressLayouts);
   app.set('../views', path.join(__dirname, '..','views'));

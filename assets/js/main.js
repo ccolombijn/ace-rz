@@ -1,6 +1,4 @@
 'use strict';
-/* laxbreak:true */
-
 import {ace,model, components as component} from 'ace';
 const options =new Object({});
 options.with = [

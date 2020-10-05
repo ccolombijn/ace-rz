@@ -10,5 +10,8 @@
     }
   
   ],
-  "use" : [ "welcome" ]
+  "use" : [ "welcome" ],
+  "routes" : [
+    { "/dashboard" : "dashboard@welcome" }
+  ]
 }

@@ -2022,6 +2022,10 @@ export const component = (() => {
     if (typeof item.mount === 'function') {
       item.mount(output);
     }
+    view[item.name] = output;
+          controller[item.name] = {
+            model : item.model.name
+          }
   };
   return methods;
 })();

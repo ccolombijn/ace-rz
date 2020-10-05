@@ -1,15 +1,16 @@
 'use strict';
 import {$_} from './$_.js';
 import {config} from './config.js';
+const templates = new Object({});
 export const template = (()=>{
   $_(()=>{
-    const templates = new Object({});
+    
     function template(args){
       if(args.name && args.url){
         $.get(args.url,(res)=>{
-          if(args.name){
-            templates[args.name] = res;
-          }
+          
+          templates[args.name] = res;
+          
         })
         
       }

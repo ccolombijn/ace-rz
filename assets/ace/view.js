@@ -1,8 +1,9 @@
 'use strict';
 import {config} from './config.js';
 import {component} from './components.js';
+const views = new Object({});
 export const view = (()=>{
-  const views = new Object({});
+  
   function view(options){
     if(options.name && options.component){
       if(!views[options.name]) views[options.name] = component[options.component]; // 
